@@ -1,0 +1,21 @@
+bentoml
+torchvision
+joblib
+tqdm
+pip-chill
+wincertstore
+dvc
+mlflow
+ipykernel
+numpy
+pandas
+seaborn
+
+
+pytest
+tox
+flake8
+mypy
+black
+
+# -e .
