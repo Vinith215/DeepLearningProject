@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 from torch.utils.data.dataloader import DataLoader
 
-@dataclass 
+
+@dataclass
 class DataIngestionArtifact:
     train_file_path: str
+
     test_file_path: str
-    
+
 @dataclass
 class DataTransformationArtifact:
     transformed_train_object: DataLoader
@@ -17,22 +19,20 @@ class DataTransformationArtifact:
     test_transform_file_path: str
 
 
+
 @dataclass
 class ModelTrainerArtifact:
-    """Minimal artifact produced by the (stub) model trainer."""
-
-    model_path: str = ""
+    trained_model_path: str
+    
 
 
 @dataclass
 class ModelEvaluationArtifact:
-    """Minimal artifact produced by the (stub) model evaluation."""
-
-    is_model_accepted: bool = True
+    model_accuracy: float
 
 
 @dataclass
 class ModelPusherArtifact:
-    """Minimal artifact produced by the (stub) model pusher."""
+    bentoml_model_name: str
 
-    pusher_model_dir: str = ""
+    bentoml_service_name: str
